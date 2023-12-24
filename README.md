@@ -1,8 +1,7 @@
 # Weather-To-Watt
 
-
-### Rationale
 Solar power generation is highly dependent on various meteorological factors. Understanding and predicting the efficiency of solar energy production under clear sky conditions (a state where solar irradiance is not hindered by clouds) is crucial for optimizing solar panel performance and energy grid management. 
+
 This project aims to address this need by developing a robust predictive model that can accurately estimate solar energy production using a range of weather parameters. Accurate predictions are vital for energy planning, reducing wastage, and improving the reliability of solar power as a sustainable energy source.
 
 
@@ -23,4 +22,5 @@ In this project, I employed the CatBoost algorithm, a high-performance gradient 
   - **Solar Zenith Angle:** Degrees (°)
   - **Precipitable Water:** Millimeters (mm)
   - **Relative Humidity:** Percentage (%)
+    
 The choice of a multi-label regression approach allows for simultaneous predictions of DHI, DNI, and GHI, offering a comprehensive view of solar irradiance under clear sky conditions.
