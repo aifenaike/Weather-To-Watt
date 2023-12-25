@@ -2,7 +2,7 @@
 
 <p  align="center">
 
-<img  src="assets/solar_farm.jpg"  alt="Solar farm"  height=312  width=820/>
+<img  src="assets/solar_farm.jpeg"  alt="Solar farm"  height=312  width=820/>
 
 </p> 
 
