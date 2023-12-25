@@ -1,8 +1,5 @@
 # Weather-To-Watt (Solar Efficiency Prediction Microservice)
 
-![Solar farm](assets/solar_farm.jpg)
-
-
 ## Project Overview
 Solar power generation is highly dependent on various meteorological factors. Understanding and predicting the efficiency of solar energy production under clear sky conditions (a state where solar irradiance is not hindered by clouds) is crucial for optimizing solar panel performance and energy grid management. 
 
