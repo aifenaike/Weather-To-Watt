@@ -7,7 +7,7 @@ This project focuses on creating a microservice adept at predicting solar energy
 
 ### Objective
 
-The primary objective of this project is to develop and validate a multi-label regression model capable of predicting key solar irradiance components: Diffuse Horizontal Irradiance (DHI), Direct Normal Irradiance (DNI), and Global Horizontal Irradiance (GHI). The model utilizes a comprehensive set of input parameters, including temperature, dew point, surface albedo, atmospheric pressure, wind conditions, solar zenith angle, and more, to provide precise and location-specific predictions via a microservice.
+The primary objective of this project is to develop and validate a multi-label regression model capable of predicting key solar irradiance components: **Diffuse Horizontal Irradiance (DHI)**, **Direct Normal Irradiance (DNI)**, and **Global Horizontal Irradiance (GHI)**. The model utilizes a comprehensive set of input parameters, including temperature, dew point, surface albedo, atmospheric pressure, wind conditions, solar zenith angle, and more, to provide precise and location-specific predictions via a microservice.
 
 ### Model Development
 
