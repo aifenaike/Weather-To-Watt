@@ -1,10 +1,11 @@
 # Weather-To-Watt (Solar Efficiency Prediction Microservice)
 
 #### Table of contents
-1. [WProject Overview](#Project-Overview)
+1. [Project Overview](#Project-Overview)
 2. [Objective](#Objective)
 3. [Model Development](#Model-Development)
 4. [Performance Tests with Locust](#Performance-Tests-with-Locust)
+
    
 ## Project Overview
 Solar power generation is highly dependent on various meteorological factors. Understanding and predicting the efficiency of solar energy production under clear sky conditions (a state where solar irradiance is not hindered by clouds) is crucial for optimizing solar panel performance and energy grid management. 
