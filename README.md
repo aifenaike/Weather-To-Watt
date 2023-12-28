@@ -1,5 +1,10 @@
 # Weather-To-Watt (Solar Efficiency Prediction Microservice)
 
+<p align="center">
+  <img src="assets/solar_farm.jpg" width='600' />
+</p>
+
+
 #### Table of contents
 1. [Project Overview](#Project-Overview)
 2. [Objective](#Objective)
