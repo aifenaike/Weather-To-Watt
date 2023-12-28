@@ -1,7 +1,7 @@
 # Weather-To-Watt (Solar Efficiency Prediction Microservice)
 
 <p align="center">
-  <img src="assets/solar_farm.jpg" width='600' />
+  <img src="assets/solar_farm.jpg" width='900' />
 </p>
 
 #### Table of contents
@@ -41,7 +41,7 @@ To ensure the model's accuracy and reliability, it was trained on a historical d
 
 ## System Architecture
 
-<p align="right">
+<p align="left">
   <img src="assets/triad.png" width='600' />
 </p>
 
@@ -69,12 +69,12 @@ To ensure the model's accuracy and reliability, it was trained on a historical d
    
 4. Next, we need to provide information about tests to Locust. In the screen, we define how many users (ie. processes) we want to create. Also, we need to define how fast those processes are going to be created (**spawn rate**). Finally, we need to define the address of the API. **We don’t need to define the endpoint.**
 
-<p align="center">
+<p align="left">
   <img src="assets/Locust homepage.png" width='600' />
 </p>
 
 - Number of Users and requests per second  <Test>
-<p align="center">
+<p align="left">
   <img src="assets/number_of_users_1703802883.png" width='600' />
 </p>
 
