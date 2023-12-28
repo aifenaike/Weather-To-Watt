@@ -1,13 +1,19 @@
 # Weather-To-Watt (Solar Efficiency Prediction Microservice)
 
+#### Table of contents
+1. [WProject Overview](#Project-Overview)
+2. [Objective](#Objective)
+3. [Model Development](#Model-Development)
+4. [Performance Tests with Locust](#Performance-Tests-with-Locust)
+   
 ## Project Overview
 Solar power generation is highly dependent on various meteorological factors. Understanding and predicting the efficiency of solar energy production under clear sky conditions (a state where solar irradiance is not hindered by clouds) is crucial for optimizing solar panel performance and energy grid management. 
 
-This project focuses on creating a microservice adept at predicting solar energy efficiency. It harnesses cutting-edge machine learning techniques, along with extensive weather data, to forecast the performance under clear sky conditions accurately.  The accuracy of these predictions is key to streamlining energy planning, minimizing resource wastage, and bolstering the dependability of solar power as a renewable energy option. The architecture of this system, encompassing FastAPI for the API implementation and Celery for asynchronous task management, ensures both high efficiency and responsiveness, aligning with the demands of modern, sustainable energy solutions.
+This project focuses on creating a microservice adept at predicting solar energy efficiency. It harnesses cutting-edge machine learning techniques, along with extensive weather data, to forecast the performance under clear sky conditions accurately.  The accuracy of these predictions is key to streamlining energy planning, minimizing resource wastage, and bolstering the dependability of solar power as a renewable energy option. The system's architecture employs FastAPI for robust API implementation and leverages the open-source Locust framework for load testing. **This approach assesses the API's capacity to manage its intended workload, pinpoint bottlenecks, and detect any performance issues, thereby guaranteeing efficiency and responsiveness that meet the requirements of contemporary, eco-friendly energy solutions.**
 
 ### Objective
 
-The primary objective of this project is to develop and validate a multi-label regression model capable of predicting key solar irradiance components: **Diffuse Horizontal Irradiance (DHI)**, **Direct Normal Irradiance (DNI)**, and **Global Horizontal Irradiance (GHI)**. The model utilizes a comprehensive set of input parameters, including temperature, dew point, surface albedo, atmospheric pressure, wind conditions, solar zenith angle, and more, to provide precise and location-specific predictions via a microservice.
+The primary objective of this project is to develop and validate an API that leverges a multi-label regression model to predict key solar irradiance components: **Diffuse Horizontal Irradiance (DHI)**, **Direct Normal Irradiance (DNI)**, and **Global Horizontal Irradiance (GHI)**. The model utilizes a comprehensive set of input parameters, including temperature, dew point, surface albedo, atmospheric pressure, wind conditions, solar zenith angle, and more, to provide precise and location-specific predictions via a microservice.
 
 ### Model Development
 
@@ -27,15 +33,6 @@ To ensure the model's accuracy and reliability, it was trained on a historical d
   - **Precipitable Water:** Millimeters (mm)
   - **Relative Humidity:** Percentage (%)
 
-
-## Features
-
-- **Accurate Predictions**: Multi-label regression model using CatBoost to predict Diffuse Horizontal Irradiance (DHI), Direct Normal Irradiance (DNI), and Global Horizontal Irradiance (GHI).
-- **Asynchronous Processing**: Leveraging Celery for handling heavy computational tasks without blocking the main API server.
-- **Scalable Architecture**: Both FastAPI and Celery are containerized using Docker, allowing for easy scaling.
-- **Comprehensive Inputs**: Utilizes various parameters like temperature, dew point, wind conditions, solar zenith angle, etc., for precise predictions.
-
-
 ## System Architecture
 
 1. **FastAPI Server**: Handles incoming HTTP requests, validates them, and dispatches prediction tasks.
@@ -43,3 +40,24 @@ To ensure the model's accuracy and reliability, it was trained on a historical d
 3. **Message Broker (RabbitMQ/Redis)**: Manages the task queue between FastAPI and Celery.
 4. **Machine Learning Model**: Encapsulated in a Docker container, accessible by Celery workers.
 5. **Database (Optional)**: Stores prediction results and request data.
+
+
+## Performance Tests with Locust 🦗
+
+1. Create a Python virtual environment with the project dependencies with
+    ```
+    $ make init
+    ```
+
+2. Specify command to run a Locust server for performance tests on your machine. 
+    ```
+    $ locust -f tests/locust_test.py
+    ```
+
+3. We can access it via browser, the default port is 8989. The tests should appear at http://127.0.0.1:8089/
+   
+4. Next, we need to provide information about tests to Locust. In the screen, we define how many users (ie. processes) we want to create. Also, we need to define how fast those processes are going to be created (**spawn rate**). Finally, we need to define the address of the API. **We don’t need to define the endpoint.**
+    
+
+
+
