@@ -55,9 +55,10 @@ To ensure the model's accuracy and reliability, it was trained on a historical d
 
 ## Performance Tests with Locust 🦗
 
-1. Create a Python virtual environment with the project dependencies with
+1. Create a Python virtual environment and install the necessary dependencies with:
     ```
-    $ make init
+    $ python3 -m venv env
+    $ pip install -r requirements.txt
     ```
 
 2. Specify command to run a Locust server for performance tests on your machine. 
