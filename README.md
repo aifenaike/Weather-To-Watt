@@ -4,7 +4,6 @@
   <img src="assets/solar_farm.jpg" width='600' />
 </p>
 
-
 #### Table of contents
 1. [Project Overview](#Project-Overview)
 2. [Objective](#Objective)
@@ -41,6 +40,10 @@ To ensure the model's accuracy and reliability, it was trained on a historical d
 
 ## System Architecture
 
+<p align="center">
+  <img src="assets/triad.png" width='600' />
+</p>
+
 1. **FastAPI Server**: Handles incoming HTTP requests, validates them, and dispatches prediction tasks.
 2. **Celery Worker**: Processes the predictive tasks asynchronously.
 3. **Message Broker (RabbitMQ/Redis)**: Manages the task queue between FastAPI and Celery.
@@ -63,6 +66,21 @@ To ensure the model's accuracy and reliability, it was trained on a historical d
 3. We can access it via browser, the default port is 8989. The tests should appear at http://127.0.0.1:8089/
    
 4. Next, we need to provide information about tests to Locust. In the screen, we define how many users (ie. processes) we want to create. Also, we need to define how fast those processes are going to be created (**spawn rate**). Finally, we need to define the address of the API. **We don’t need to define the endpoint.**
+
+<p align="center">
+  <img src="assets/Locust homepage.png" width='600' />
+</p>
+
+- Number of Users <Test>
+<p align="center">
+  <img src="assets/number_of_users_1703802883.png" width='600' />
+</p>
+
+- Number of requests per second <Test>
+<p align="center">
+  <img src="assets/total_requests_per_second_1703802883.png" width='600' />
+</p>
+
     
 
 
