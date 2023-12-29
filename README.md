@@ -15,7 +15,9 @@
 ## Project Overview
 Solar power generation is highly dependent on various meteorological factors. Understanding and predicting the efficiency of solar energy production under clear sky conditions (a state where solar irradiance is not hindered by clouds) is crucial for optimizing solar panel performance and energy grid management. 
 
-This project focuses on creating a microservice adept at predicting solar energy efficiency. It harnesses cutting-edge machine learning techniques, along with extensive weather data, to forecast the performance under clear sky conditions accurately.  The accuracy of these predictions is key to streamlining energy planning, minimizing resource wastage, and bolstering the dependability of solar power as a renewable energy option. The system's architecture employs FastAPI for robust API implementation and leverages the open-source Locust framework for load testing. **This approach assesses the API's capacity to manage its intended workload, pinpoint bottlenecks, and detect any performance issues, thereby guaranteeing efficiency and responsiveness that meet the requirements of contemporary, eco-friendly energy solutions.**
+This project focuses on creating a microservice adept at predicting solar energy efficiency. It harnesses cutting-edge machine learning techniques, along with extensive weather data, to forecast the performance under clear sky conditions accurately.  The accuracy of these predictions is key to streamlining energy planning, minimizing resource wastage, and bolstering the dependability of solar power as a renewable energy option. 
+
+The system's architecture employs FastAPI for robust API implementation and leverages the open-source Locust framework for load testing. **This approach assesses the API's capacity to manage its intended workload, pinpoint bottlenecks, and detect any performance issues, thereby guaranteeing efficiency and responsiveness that meet the requirements of contemporary, eco-friendly energy solutions.**
 
 ## Objective
 
