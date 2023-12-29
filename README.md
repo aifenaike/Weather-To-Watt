@@ -45,13 +45,49 @@ To ensure the model's accuracy and reliability, it was trained on a historical d
   <img src="assets/triad.png" width='600' />
 </p>
 
-1. **FastAPI Server**: Handles incoming HTTP requests, validates them, and dispatches prediction tasks.
-2. **Celery Worker**: Processes the predictive tasks asynchronously.
-3. **Message Broker (RabbitMQ/Redis)**: Manages the task queue between FastAPI and Celery.
-4. **Machine Learning Model**: Encapsulated in a Docker container, accessible by Celery workers.
-5. **Database (Optional)**: Stores prediction results and request data.
+Roles of the different components in the application setup:
+
+1. **FastAPI:** Manages incoming HTTP requests, validates input data, and invokes the machine learning model for predictions.
+2. **Docker:** Containers run the FastAPI application and the machine learning model, ensuring consistency across different environments.
+3. **Machine Learning Model:** Hosted within a Docker container and called upon by FastAPI to provide predictions based on meteorological data inputs.
+4. **Locust:** Conducts load testing by simulating traffic to the API, ensuring the service can handle the expected load without performance degradation.
 
 ## API Usage
+
+Here's a streamlined guide for querying the prediction endpoint of the machine learning API using a Python script. The following sample code employs the `requests` library to transmit data to the API and retrieve the resulting predictions.
+
+```python
+import requests
+import json
+
+# The correct API endpoint for predictions
+api_endpoint = 'https://weather-to-watt-serv.onrender.com/predict'
+
+# Example data to be sent to the API for prediction
+data = {
+    "Timestamp": "2024-01-01 01:00:00",
+    "Temperature":13,
+    "Dew_Point":7.0,
+    "Surface_Albedo":0.22,
+    "Pressure":1000,
+    "Wind_Direction":126,
+    "Wind_Speed":1,
+    "Ozone":0.256, "Cloud_Type":6,
+    "Solar_Zenith_Angle":160,
+    "Precipitable_Water":1.4,"Relative_Humidity":67,
+}
+# Send a POST request to the API
+response = requests.post(api_endpoint, json=data)
+
+# Check if the request was successful
+if response.status_code == 200:
+    # Parse the prediction result from the response
+    prediction = response.json()
+    print("Prediction:", prediction)
+else:
+    print(f"Failed to get a prediction. Status code: {response.status_code}")
+    print("Response:", response.json())
+```
 
 ## Performance Tests with Locust 🦗
 
@@ -70,12 +106,13 @@ To ensure the model's accuracy and reliability, it was trained on a historical d
    
 4. Next, we need to provide information about tests to Locust. In the screen, we define how many users (ie. processes) we want to create. Also, we need to define how fast those processes are going to be created (**spawn rate**). Finally, we need to define the address of the API. **We don’t need to define the endpoint.**
 
-<p align="left">
+<p align="center">
   <img src="assets/Locust homepage.png" width='600' />
 </p>
 
 - Number of Users and requests per second  <Test>
-<p align="left">
+
+<p align="center">
   <img src="assets/number_of_users_1703802883.png" width='600' />
 </p>
 
