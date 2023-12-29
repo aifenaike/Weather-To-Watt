@@ -1,4 +1,4 @@
-# Weather-To-Watt (Solar Efficiency Prediction Microservice)
+# Weather-To-Watt (API for Predicting Solar Power Efficiency)
 
 <p align="center">
   <img src="assets/solar_farm.jpg" width='900' />
