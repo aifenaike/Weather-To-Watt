@@ -61,7 +61,7 @@ import requests
 import json
 
 # The correct API endpoint for predictions
-api_endpoint = 'https://weather-to-watt-serv.onrender.com/predict'
+api_endpoint = 'https://weather-to-watt-serv.onrender.com/docs#/default/predict_api_predict__post'
 
 # Example data to be sent to the API for prediction
 data = {
