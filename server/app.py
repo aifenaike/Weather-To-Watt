@@ -11,7 +11,9 @@ from utils import *
 
 
 # Create an instance of the FastAPI class
-app = FastAPI()
+
+app = FastAPI(title="Weather2Watt API", description = description,
+              version="0.0.1",contact=contact)
 
 # Load the trained model
 model = joblib.load('./model/catboost_model-v0.1.0.pkl')
