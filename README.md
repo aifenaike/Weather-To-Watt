@@ -49,6 +49,10 @@ To ensure the model's accuracy and reliability, it was trained on a historical d
 
 Roles of the different components in the application setup:
 
+<p align="center">
+  <img src="assets/tools.png" width='600' />
+</p>
+
 1. **FastAPI:** Manages incoming HTTP requests, validates input data, and invokes the machine learning model for predictions.
 2. **Docker:** Containers run the FastAPI application and the machine learning model, ensuring consistency across different environments.
 3. **Machine Learning Model:** Hosted within a Docker container and called upon by FastAPI to provide predictions based on meteorological data inputs.
