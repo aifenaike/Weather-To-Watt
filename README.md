@@ -25,7 +25,7 @@ The primary objective of this project is to develop and validate an API that lev
 
 ## Model Development
 
-I adopted a **multi-label regression** strategy to enable simultaneous predictions of Diffuse Horizontal Irradiance (DHI), Direct Normal Irradiance (DNI), and Global Horizontal Irradiance (GHI). This approach allows for a detailed analysis of solar irradiance in clear sky conditions. **Central to this microservice is the predictive model, for which I chose the CatBoost algorithm. Renowned for its high performance as a gradient boosting framework, CatBoost excels in managing datasets that are both diverse and complex.**
+I adopted a **multi-label regression** strategy to enable simultaneous predictions of Diffuse Horizontal Irradiance (DHI), Direct Normal Irradiance (DNI), and Global Horizontal Irradiance (GHI). This approach allows for a detailed analysis of solar irradiance in clear sky conditions. **Central to this project is the predictive model, for which I chose the CatBoost algorithm. Renowned for its high performance as a gradient boosting framework, CatBoost excels in managing datasets that are both diverse and complex.**
 
 To ensure the model's accuracy and reliability, it was trained on a historical dataset encompassing both weather data and solar irradiance measurements. This training process emphasized the following key inputs:
   - **Timestamp**: Date and time of measurement
