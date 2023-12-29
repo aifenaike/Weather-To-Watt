@@ -7,6 +7,64 @@ input_feature_names = ['Dew Point', 'Surface Albedo', 'Pressure', 'Wind Directio
        'Season', 'Temperature_RollingMean_3day', 'Temp_Humidity_Interaction',
        'Hour_Sin', 'Hour_Cos']
 
+contact={
+        "name": "Ifenaike Alexander",
+        "url": "https://github.com/aifenaike"
+    }
+
+description = """
+
+Weather2Watt API helps you forecast solar power efficiency ☀️💡.
+
+## Data Inputs
+
+* **Timestamp**: Date and time of measurement.
+
+* **Temperature**: Degrees Celsius (°C).
+
+* **Dew Point**: Degrees Celsius (°C).
+
+* **Surface Albedo**: Decimal fraction between 0 and 1.
+
+* **Pressure**: Hectopascals (hPa).
+
+* **Wind Direction**: Degrees (°).
+
+* **Wind Speed**: Meters per second (m/s).
+
+* **Ozone**: Dobson Units (DU).
+
+* **Cloud Type**: Classification scheme (0-9) indicating cloud cover type.
+
+* **Solar Zenith Angle**: Degrees (°).
+
+* **Precipitable Water**: Millimeters (mm).
+
+* **Relative Humidity**: Percentage (%).
+
+## Users
+
+You will be able to:
+
+* **Pass weather-related data into the API to obtain a forecast**
+
+## Example
+
+{
+    "Timestamp": "2019-01-01 01:00:00"**,
+    "Temperature":13,
+    "Dew_Point":7.0,
+    "Surface_Albedo":0.22,
+    "Pressure":1000,
+    "Wind_Direction":126,
+    "Wind_Speed":1,
+    "Ozone":0.256, "Cloud_Type":6,
+    "Solar_Zenith_Angle":160,
+    "Precipitable_Water":1.4,"Relative_Humidity":67,
+}
+
+**Note**: _Correct the Timestamp to be able to properly use the API_
+"""
 
 def engineer_new_features(data):
     """
